@@ -1,0 +1,44 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>Farnworth Dead Hang</title>
+  <meta name="description" content="The Farnworth home gym dead hang challenge, replayed with stick figures.">
+  <meta name="theme-color" content="#15171c">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="top">
+    <div>
+      <h1>Farnworth <span>Dead Hang</span></h1>
+      <p id="subtitle" class="sub">Loading the contenders…</p>
+    </div>
+    <div class="clock" aria-live="off">
+      <span class="clock-label">Hang time</span>
+      <span id="clock" class="clock-value">0:00</span>
+    </div>
+  </header>
+
+  <main>
+    <div class="stage">
+      <canvas id="stage" aria-label="Animation of stick figures hanging from a bar and dropping off at their recorded times"></canvas>
+      <p id="hint" class="hint" hidden>Tap a contestant to zoom in · tap again to zoom out</p>
+    </div>
+
+    <div class="controls">
+      <button id="replay" type="button">↻ Replay</button>
+      <button id="speed" type="button" aria-label="Playback speed">Speed 8×</button>
+      <button id="skip" type="button">Skip to results ⏭</button>
+    </div>
+
+    <section id="results" class="results" hidden>
+      <h2>Leaderboard</h2>
+      <p class="sub">Each person's best hang. Tap a row to find them on the bar.</p>
+      <ol id="board" class="board"></ol>
+    </section>
+  </main>
+
+  <script src="app.js"></script>
+</body>
+</html>
